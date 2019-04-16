@@ -34,7 +34,7 @@
 
 ##Computer System Operation
 
-![image-20190417013748204](/Users/kyu/Library/Application Support/typora-user-images/image-20190417013748204.png)
+![image-20190417013748204](./img/image-20190417013748204.png)
 
 - Each IO Device controller has a local buffer.
 - Disk Controller moves data from/to device to/from local buffer of device controller.
@@ -44,7 +44,7 @@
 
 #### Interrupt Handling
 
-![image-20190417014620012](/Users/kyu/Library/Application Support/typora-user-images/image-20190417014620012.png)
+![image-20190417014620012](./img/image-20190417014620012.png)
 
 - interrupt vector table에는 인터럽트가 발생한 프로그램일부의 주소를 알려줌
 
@@ -52,7 +52,7 @@
 
 - Interrupt timeline
 
-  ![image-20190417014400829](/Users/kyu/Library/Application Support/typora-user-images/image-20190417014400829.png)
+  ![image-20190417014400829](./img/image-20190417014400829.png)
 
   - 실행흐름
     - 인터럽트가 발생되면 cpu 실행중인 작업 중단
@@ -67,12 +67,12 @@
 ##Storage Structure
 
 - Main memory
-  ![image-20190417020431582](/Users/kyu/Library/Application Support/typora-user-images/image-20190417020431582.png)
+  ![image-20190417020431582](./img/image-20190417020431582.png)
   - Storage media that CPU can access directly
   - DRAM : Dynamic random Access Memory
     - Volatile ( 휘발성 - 전원 꺼지면 사라짐)
 - Secondary memory
-  ![image-20190417020449674](/Users/kyu/Library/Application Support/typora-user-images/image-20190417020449674.png)
+  ![image-20190417020449674](./img/image-20190417020449674.png)
   - sotrage media that provides large <b>nonvolatile</b> storage capacity
   - HDD : Hard Disk Drives)
   - NAND flash memory
@@ -80,19 +80,19 @@
 
 #### Storage hierachy
 
-![image-20190417020644988](/Users/kyu/Library/Application Support/typora-user-images/image-20190417020644988.png)
+![image-20190417020644988](./img/image-20190417020644988.png)
 
 - volatility 는 낮은 hierachy에만 지원
 
 - The characteristics of different storage media
 
-  ![image-20190417020842197](/Users/kyu/Library/Application Support/typora-user-images/image-20190417020842197.png)
+  ![image-20190417020842197](./img/image-20190417020842197.png)
 
 ##Caching
 
 - To execute program,
 
-  ![image-20190417020934823](/Users/kyu/Library/Application Support/typora-user-images/image-20190417020934823.png)
+  ![image-20190417020934823](./img/image-20190417020934823.png)
 
   위로올라갈 수록 용량이 적기 때문에 HDD부터 적재된 프로그램에 메모리로 올려서 수행됨
 
@@ -131,7 +131,7 @@
 
       - All CPUs have the most recent value in their cache.
 
-        ![image-20190417021419482](/Users/kyu/Library/Application Support/typora-user-images/image-20190417021419482.png)
+        ![image-20190417021419482](./img/image-20190417021419482.png)
 
 ##Operating system structure
 
@@ -180,7 +180,7 @@
   - 현재 시스템이 어디서 실행되고 있는지 구별
   - User mode (1) or kernel mode(0)
 
-  ![image-20190417025326257](/Users/kyu/Library/Application Support/typora-user-images/image-20190417025326257.png)
+  ![image-20190417025326257](./img/image-20190417025326257.png)
 
 ##process Management
 
@@ -277,7 +277,7 @@
 
 - **Treats hardware and kernel as though they were all hardware.**
 
-  ![image-20190417031708608](/Users/kyu/Library/Application Support/typora-user-images/image-20190417031708608.png)
+  ![image-20190417031708608](./img/image-20190417031708608.png)
 
 ####Features of virtual virtual machine
 
@@ -289,7 +289,7 @@
 
 - vmware architecture
 
-![image-20190417032009908](/Users/kyu/Library/Application Support/typora-user-images/image-20190417032009908.png)
+![image-20190417032009908](./img/image-20190417032009908.png)
 
 ##Summary
 
