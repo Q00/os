@@ -42,6 +42,17 @@
 - CPU, I/O Device can perform independently
   - Device controller informs CPU that it finished its operation by interrupt.
 
+#### purpose of Interrupt
+
+- 입출력에서 작업이 끝났을때
+- 각 단계에서 적절한 제어가 필요할때 
+
+발생시켜 CPU가 처리를 할 수 있게함
+
+**인터럽트에는 우선순위가 있어 중요한 처리를 우선적 처리가능**
+
+
+
 #### Interrupt Handling
 
 ![image-20190417014620012](./img/image-20190417014620012.png)
@@ -135,6 +146,8 @@
 
 ##Operating system structure
 
+- multiprogramming과 time sharing 은 run program simultaneously
+
 #### Multiprogramming
 
 - Several programs are <b>kept</b> in main memory at the same time, and CPU is multiplexed among them. -> <b>increase CPU utilization</b>
@@ -148,6 +161,11 @@
     - 메모리내 프로세스의 수를 조절
   - cpu scheduling
     - 작업중 어떤 것을 할당할지 선택
+- 단점
+  - do not provide for user interaction with the computer system
+    - 사용자는 실행중인 작업에 대해서는 관여하지못함
+  - 반드시 여러개의 프로그램들이 메모리에 존재해야함
+    - 하나의 프로그램이면 입출력작업이 완료될때까지 프로세서가 기다려야함
 
 #### time sharing
 
@@ -155,7 +173,16 @@
 - UNIX is good example
 - CPU switches programs so frequently that users can interact with each program. -> minimize the response time
 
-##Operating System Operations
+#### 공유환경에서의 문제점
+
+-  One user can read the private data of another user - privacy.
+
+- One user can corrupt the private data of another user - integrity.
+
+- One user can prevent another user from getting anything done - denial of service.
+- 정보보호, 무결성, 서비스 거부
+
+#### Operating System Operations
 
 - OS is <b>event driven</b>
   - when no programs, no I/O requests, and no users, 
@@ -163,7 +190,10 @@
 - Events
   - Hardware interrupts - disk interrupt, keyboard interrupt, mouse interrupt, etc.
   - Software trap(exceptions)
-    - divide by zero, invalid memory access, system call etc
+    - divide by zero, invalid memory access, system call(의도적으로 발생시킨 것) etc
+      - system call
+        - 커널모드로 특정기능을 수행하도록 요청하기 위해서 사용
+    - user program 에서 발생된 인터럽트
   - Other errors
     - infinite loop
 
