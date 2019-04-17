@@ -7,7 +7,7 @@
 
 ## operating system definition
 
-####Four components of a computer system
+#### Four components of a computer system
 
 - Hardware
   - central processing unit ( CPU )
@@ -20,7 +20,7 @@
 - application programs
 - Users
 
-####definition of operating system
+#### definition of operating system
 
 - User view
   - os executes the application (compromise between individual usability and resource utilization)
@@ -32,7 +32,7 @@
   - Kernel - 항상 수행되고 있는 프로그램
   - 이외의 다른 것은 다른 시스템 프로그램이나 응용프로그램
 
-##Computer System Operation
+## Computer System Operation
 
 ![image-20190417013748204](./img/image-20190417013748204.png)
 
@@ -75,7 +75,7 @@
   - Hardware : system bus 로 interrupt 발생시킴
   - Software : system call 로 발생시킴
 
-##Storage Structure
+## Storage Structure
 
 - Main memory
   ![image-20190417020431582](./img/image-20190417020431582.png)
@@ -99,7 +99,7 @@
 
   ![image-20190417020842197](./img/image-20190417020842197.png)
 
-##Caching
+## Caching
 
 - To execute program,
 
@@ -144,7 +144,7 @@
 
         ![image-20190417021419482](./img/image-20190417021419482.png)
 
-##Operating system structure
+## Operating system structure
 
 - multiprogramming과 time sharing 은 run program simultaneously
 
@@ -212,7 +212,7 @@
 
   ![image-20190417025326257](./img/image-20190417025326257.png)
 
-##process Management
+## process Management
 
 - A process is a program in excecution
   - program is a <b>passive</b> entity, process is an <b>active</b> entity
@@ -226,20 +226,20 @@
   - Inter-process communication mecahnisms
   - Deadlock handling
 
-##Memory Management
+## Memory Management
 
-####Memory management activities
+#### Memory management activities
 
 - Keeping track of witch parts of memory are currently being used by whom
 - Deciding which process and data to move into and out of memory
 - Allocating and deallocating memory space as needed
 
-####Virtual memory system
+#### Virtual memory system
 
 - Virtualizes various forms of data storage( DRAM and disk) allowing a program to be designed as though there is only one kind of memory, "virtual" memory
 - 다양한 형태의 데이터 스토리지(D램 및 디스크)를 가상화하여 마치 하나의 메모리인 "가상" 메모리만 있는 것처럼 프로그램을 설계할 수 있다.
 
-##Storage Management = File system
+## Storage Management = File system
 
 - OS provides uniform, logical view of information storage
   - File
@@ -252,21 +252,21 @@
   - supporting primitives to manipulate files and direcotries
   - Mapping files onto secondary storage
 
-####Mass-storage management
+#### Mass-storage management
 
 - Usually disks are used to store data
 - Entire speed of computer operation depends on <b>disk subsystem and its algorithms</b>
 - magnetic tape..
 
-####Disk storage activities
+#### Disk storage activities
 
 - Free-space management
 - Storage allocation
 - disk scheduling
 
-##I/O Subsystem
+## I/O Subsystem
 
-####One purpose of OS is
+#### One purpose of OS is
 
 - to hide peculiarities of hardware devices from the user
   사용자에게 하드웨어 장치의 특성을 숨기다
@@ -277,7 +277,7 @@
 
   [하드웨어 추상화](https://ko.wikipedia.org/wiki/%ED%95%98%EB%93%9C%EC%9B%A8%EC%96%B4_%EC%B6%94%EC%83%81%ED%99%94)
 
-####I/O subsystem consists of
+#### I/O subsystem consists of
 
 - general device-driver interface
 - Drivers for specific hardware devices
@@ -286,7 +286,7 @@
   - caching
   - Spooling
 
-##Special purpose system
+## Special purpose system
 
 - Real time system
   - <b>Deadline</b> - rigind response time requirment
@@ -297,9 +297,9 @@
   - Low H/W capabilities
     - Slow processors, limited memory, small display screens, limited power
 
-##Virtutal machines
+## Virtutal machines
 
-####Virtual machines
+#### Virtual machines
 
 - Abstract a single computer into several diffrent execution environments
 
@@ -309,7 +309,7 @@
 
   ![image-20190417031708608](./img/image-20190417031708608.png)
 
-####Features of virtual virtual machine
+#### Features of virtual virtual machine
 
 - It provide complete protection of system resources.
   There is no direct sharing of resources.
@@ -321,7 +321,7 @@
 
 ![image-20190417032009908](./img/image-20190417032009908.png)
 
-##Summary
+## Summary
 
 - Operating system acts as an intermediary between applications and the computer hardware, it manages computer hardware resources and provides some services for application
 - When interrupt occurs, CPU stops what it is doing and invokes the interrupt service routine (ISR)
