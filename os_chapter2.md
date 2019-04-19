@@ -133,13 +133,13 @@
 
 ### Operating System Design and Implementaion
 
-####Design goals
+#### Design goals
 
-#####Choice of hardware and system type
+##### Choice of hardware and system type
 
 - batch, time sharing, single/multi user, distributed, real-time
 
-#####requirementes
+##### requirementes
 
 - userview
   - Convenient to use, easy to learn, reliable, safe, and fast
@@ -147,7 +147,7 @@
   - easy to design, implement, and maintain
   - flexible, reliable, error-free, efficient
 
-#####Seperation of policy from mechanism
+##### Seperation of policy from mechanism
 
 - The separation of policy from mechanism is a very important principle, it allows maximum **flexibility** if policy decisions are to be changed later
   - policy 변경에 민감하지 않은 일반적인 mechanism이 바람직
@@ -159,7 +159,7 @@
 - Policy
   - determine what will be done ( what to do) ( 목적이 있음)
 
-#####Implementation
+##### Implementation
 
 - 이전에 어셈블리였던 것들이 지금은 c나 c++로 작성됨
 
@@ -168,7 +168,7 @@
 
 ### Operating system structures
 
-####Simple structure
+#### Simple structure
 
 - Interfaces and levels of functionality are not well seperated
 
@@ -178,7 +178,7 @@
 
   ![image-20190417044342048](./img/image-20190417044342048.png)
 
-####Layered structure
+#### Layered structure
 
 - Os is divided into a number of layers (levels)
 
@@ -194,7 +194,7 @@
 
   ![image-20190417045839354](./img/image-20190417045839354.png)
 
-####Microkernel structure
+#### Microkernel structure
 
 - Moves as much from the kernel into "user" space
 
@@ -233,9 +233,9 @@
 
 ![image-20190417050723454](./img/image-20190417050723454.png)
 
-###System boot
+### System boot
 
-####How to load Kernel
+#### How to load Kernel
 
 - Bootloader
   - run diagnostics, initialize system
