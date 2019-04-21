@@ -164,7 +164,7 @@ while(true){
 
   ![image-20190408160313057](./img/image-20190408160313057.png)
 
-  - Busy waiting vs Block-wakeup
+- Busy waiting vs Block-wakeup
     - Busy waiting
       - No context switching is required
         - 한 프로세스가 계속 CPU를 가지고 있음
