@@ -89,7 +89,7 @@
   - I/O status information
     - The list of I/O devices allocated to the process, Open files
 
-## Threads
+## Schedulers
 
 ### process Scheduling
 
