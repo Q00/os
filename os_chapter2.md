@@ -157,7 +157,7 @@
   - determine how to do something (어떤일을 어떻게 할지 결정)
 
 - Policy
-  - determine what will be done ( what to do) ( 목적이 있음)
+  - determine what will be done ( what to do) ( 목적이 있음) 어디에 집중할 지
 
 ##### Implementation
 
@@ -217,19 +217,19 @@
 
   ![image-20190417050101487](./img/image-20190417050101487.png)
 
-- Module structure
+#### Module structure
 
-  - Most modern operating systems implement kernel as modules
-  - it uses **object-oriented approach**
-  - Each core component is seperated
-  - Each talks to the other over known interfaces (any module can call any other module)
-    - layered system 보다 훨씬 flexible
-  - Each is loaded into the kernel as needed
-  - solalis, linux, mac os x
-  - Microkernel 과 유사점
-    - 다른모듈의 적재방법, 모듈들과의 통신방법을 알고 있음
-  - Microkernel 과 차이점
-    - message passing이 필요없음(do not invoke message passing) - 더 효율적
+- Most modern operating systems implement kernel as modules
+- it uses **object-oriented approach**
+- Each core component is seperated
+- Each talks to the other over known interfaces (any module can call any other module)
+  - layered system 보다 훨씬 flexible
+- Each is loaded into the kernel as needed
+- solalis, linux, mac os x
+- Microkernel 과 유사점
+  - 다른모듈의 적재방법, 모듈들과의 통신방법을 알고 있음
+- Microkernel 과 차이점
+  - message passing이 필요없음(do not invoke message passing) - 더 효율적
 
 ![image-20190417050723454](./img/image-20190417050723454.png)
 
