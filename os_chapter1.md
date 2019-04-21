@@ -105,7 +105,7 @@
 
   ![image-20190417020934823](./img/image-20190417020934823.png)
 
-  위로올라갈 수록 용량이 적기 때문에 HDD부터 적재된 프로그램에 메모리로 올려서 수행됨
+  위로올라갈 수록 용량이 적기 때문에 HDD부터 적재된 프로그램을 메모리로 올려서 수행됨
 
   copying information into faster storage system
 
@@ -228,6 +228,8 @@
 
 ## Memory Management
 
+Purpose : 메모리가 한정적이어서.
+
 #### Memory management activities
 
 - Keeping track of witch parts of memory are currently being used by whom
@@ -289,7 +291,7 @@
 ## Special purpose system
 
 - Real time system
-  - <b>Deadline</b> - rigind response time requirment
+  - <b>Deadline</b> - rigid response time requirment
   - Missile control system, mediacl equipment system
 - Multimedia systems
   - Soft real-time requirements
