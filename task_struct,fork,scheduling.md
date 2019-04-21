@@ -179,11 +179,11 @@ volatile long state;
 
 ### 2. 유닉스, 리눅스, 윈도우(3가지 OS 중 하나)   프로세스 생성 프로그램 수행해보고 결과를 캡처해보시오.
 
-![image-20190415172420462](/Users/kyu/Library/Application Support/typora-user-images/image-20190415172420462.png)
+![image-20190415172420462](./img/image-20190415172420462.png)
 
 docker 에서 ubuntu image로 해당 프로그램을 실행 시켜보았습니다.
 
-![image-20190415172824929](/Users/kyu/Library/Application Support/typora-user-images/image-20190415172824929.png)
+![image-20190415172824929](./img/image-20190415172824929.png)
 
 gcc 로 c 파일을 out 파일 형식으로 바꿔 실행시킨 결과 Child Complete 라는 문자열이 출력됩니다.
 
@@ -199,26 +199,26 @@ gcc 로 c 파일을 out 파일 형식으로 바꿔 실행시킨 결과 Child Com
 
 프로세스는 시간 0 에 P1,P2,P3,P4,P5로 도착한다고 가정한다.
 
-**a. FCFS, SJF, 비선점 우선순위(높은 우선순위 값이 높은 우선순위를 의미) 그리고 라운드 로빈                ( 할당량 : 2 ) 스케쥴링을 이용해 프로세스들의 실행을 보이는 간트 차트를 그리시오.**
+**a. FCFS, SJF, 비선점 우선순위(높은 우선순위 값이 높은 우선순위를 의미) 그리고 라운드 로빈( 할당량 : 2 ) 스케쥴링을 이용해 프로세스들의 실행을 보이는 간트 차트를 그리시오.**
 
 - FCFS
 
   - First Come First Service
 
-    ![image-20190415174443293](/Users/kyu/Library/Application Support/typora-user-images/image-20190415174443293.png)
+    ![image-20190415174443293](./img/image-20190415174443293.png)
 
 - SJF
 
   - Shortest Job Find
   - 실행시간이 가장 짧은 프로세스에게 CPU할당하는 스케쥴링
 
-  ![image-20190415174802391](/Users/kyu/Library/Application Support/typora-user-images/image-20190415174802391.png)
+  ![image-20190415174802391](./img/image-20190415174802391.png)
 
 - 비선점 우선순위
 
   - a larger priority number implies a highter prioirity
 
-  ![image-20190415175754889](/Users/kyu/Library/Application Support/typora-user-images/image-20190415175754889.png)
+  ![image-20190415175754889](./img/image-20190415175754889.png)
 
 - Round Robin (quantum 2)
 
@@ -226,7 +226,7 @@ gcc 로 c 파일을 out 파일 형식으로 바꿔 실행시킨 결과 Child Com
   - 문맥전환의 오버헤드가 큰 반면 응답시간이 짧아지는 장점이 있음 - 실시간 시스템에 유리
   - quantum 이 길어질 수록 비선점FCFS 와 비슷해짐
 
-  ![image-20190415184920737](/Users/kyu/Library/Application Support/typora-user-images/image-20190415184920737.png)
+  ![image-20190415184920737](./img/image-20190415184920737.png)
 
   
 
