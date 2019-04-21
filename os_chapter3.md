@@ -78,7 +78,7 @@
     - address of the next instruction
   - CPU registers: 누산기, 색인 레지스터, 스택 레지스터, 범용 레지스터들과 상태 코드 정보가 포함된다. 
 
-  - 프로그램 카운터와 함께 이 상태 정보는 나중에 프로세스가 계속 올바르게 수행되도록 하기 위해서, 인터럽트 발생시 저장되어야 한다. (PCB sav, reload)
+  - 프로그램 카운터와 함께 이 상태 정보는 나중에 프로세스가 계속 올바르게 수행되도록 하기 위해서, 인터럽트 발생시 저장되어야 한다. (PCB save, reload)
   - CPU scheduling information
     - Priority
 
@@ -207,8 +207,9 @@ Process가 시스템에 들어오면 job queue에 놓여짐.
 
 - Child process returns a status value to its parent(<span style='color:red'>wait</span>) 
   - wait 콜을 통해 status return
+  - 이게 안되면 child process 가 zombie ( 어떤 부모도 wait call 이 없어서 ( 기다리지 않으면 ) )
 - Child process resource are deallocated by operating system.
-- 
+  - exit call 을 받기전에 parent 가 죽어버린 경우 orphan
 
 #### Parent may terminate execution of child processes (<span style='color:red'>abort</span>)
 
