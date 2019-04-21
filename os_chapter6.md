@@ -19,7 +19,7 @@
 
   - A code segment in which the shared data is accessed
 
-  ![image-20190408145840780](/Users/kyu/Library/Application Support/typora-user-images/image-20190408145840780.png)
+  ![image-20190408145840780](./img/image-20190408145840780.png)
 
   - ensure that when one process is executing in its critical section, no other processes are allowed to execute in its critical section ( 방해불가 )
 
@@ -27,7 +27,7 @@
 
 - General structure of a typical process PI
 
-![image-20190408150136550](/Users/kyu/Library/Application Support/typora-user-images/image-20190408150136550.png)
+![image-20190408150136550](./img/image-20190408150136550.png)
 
 - 세마포어 , 락 등등
 
@@ -56,7 +56,7 @@ bool flag[2]
 //flag[i] = true, if process Pi is ready
 ```
 
-![image-20190408153442054](/Users/kyu/Library/Application Support/typora-user-images/image-20190408153442054.png)
+![image-20190408153442054](./img/image-20190408153442054.png)
 
 - turn 에 i 와 j 가 동시에 initialization이 되는 경우는 없어야 함
 - 둘다 flag[n] 가 True이므로 들어갈 대기를 하고 있고
@@ -66,7 +66,7 @@ bool flag[2]
 
 - simple tool : lock
 
-![image-20190408154438914](/Users/kyu/Library/Application Support/typora-user-images/image-20190408154438914.png)
+![image-20190408154438914](./img/image-20190408154438914.png)
 
 - Modern machines provide special atomic hardware instructions
   - Atomic = non-interruptable
@@ -109,7 +109,8 @@ while(true){
   - Shared boolean variable lock is initialized to False
   - Each process has a local boolean variable key
 
-  ~~~c
+
+  ```c
   while(true){
     key = TRUE;
     while( key == TRUE)
@@ -121,7 +122,7 @@ while(true){
     lock = FALSE;
     remainder section
   }
-  ~~~
+  ```
 
 ## Semaphore
 
@@ -132,12 +133,12 @@ while(true){
   - wait() and signal()
     - originally called P() and V()
 
-![image-20190408155412216](/Users/kyu/Library/Application Support/typora-user-images/image-20190408155412216.png)
+![image-20190408155412216](./img/image-20190408155412216.png)
 
 - Usage of semaphore
   - S는 1로 초기화
 
-![image-20190408155509943](/Users/kyu/Library/Application Support/typora-user-images/image-20190408155509943.png)
+![image-20190408155509943](./img/image-20190408155509943.png)
 
 - Binary semaphore
   - integer value can range only between 0 and 1
@@ -149,18 +150,19 @@ while(true){
 ## Semaphore implementation
 
 - Busy waiting
-  - while a process is in critical section, other processes must loop continuously. - is also called a **spin lock **
+  - while a process is in critical section, other processes must loop continuously. 
+  - is also called a **spin lock** 
   - wastes CPU cycles
 
-![image-20190408155818749](/Users/kyu/Library/Application Support/typora-user-images/image-20190408155818749.png)
+![image-20190408155818749](./img/image-20190408155818749.png)
 
 - Block and wakeup
 
   - waiting queue for each semaphore
 
-  ![image-20190408160238824](/Users/kyu/Library/Application Support/typora-user-images/image-20190408160238824.png)
+  ![image-20190408160238824](./img/image-20190408160238824.png)
 
-  ![image-20190408160313057](/Users/kyu/Library/Application Support/typora-user-images/image-20190408160313057.png)
+  ![image-20190408160313057](./img/image-20190408160313057.png)
 
   - Busy waiting vs Block-wakeup
     - Busy waiting
