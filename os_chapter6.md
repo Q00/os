@@ -35,13 +35,13 @@
 
 - Mutual Exclusion ( 상호 배제)
   - 프로세스 PI가 critical section에 있으면 다른 프로세스는 수행할 수 없다.
-- Progress
-  - critical section에 프로세스가 들어가 있지 않을때
-  - 여러 프로세스가 critical section에 들어가기를 원하고 있을 때
-  - 선택받지 못한 프로세스가 무기한으로 기다리면 안된다.
+  - Progress
+    - critical section에 프로세스가 들어가 있지 않을때
+    - 여러 프로세스가 critical section에 들어가기를 원하고 있을 때
+    - 선택받지 못한 프로세스가 무기한으로 기다리면 안된다.
 
-- Bounded waiting
-  - time bound는 starvation을 막기 위해 존재한다.
+  - Bounded waiting
+    - time bound는 starvation을 막기 위해 존재한다.
 
 ## Peterson's Solution
 
@@ -126,7 +126,8 @@ while(true){
 ## Semaphore
 
 - Semaphore S
-  - just integer variable
+  - just protected integer variable
+  - faciliate and restrict access to shared resources in a multi processing environment
 - Two standard operations to modify S
   - wait() and signal()
     - originally called P() and V()
@@ -143,7 +144,7 @@ while(true){
   - provides mutual exclusion
   - 하나의 프로세스로 락이 걸림
 - Counting semahpore
-  - integer value 가 un restricted domain range를 가지고 있음
+  - integer value 가 unrestricted domain range를 가지고 있음
 
 ## Semaphore implementation
 
