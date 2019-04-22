@@ -26,7 +26,7 @@
   - time it takes for dispatcher to stop one and start another process
   - scheduling overhead
 
-## Scheduling creteria
+## Scheduling criteria
 
 - CPU utilization
   - keeps the CPU as busy as possible

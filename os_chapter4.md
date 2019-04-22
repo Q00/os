@@ -85,3 +85,4 @@
 - managed directly by the os
   - Multi core이면 thread수가 여러개 있어야 parallel하게 수행됨
 - kernel thread 가 cpu scheduling의 단위가 됨
+
