@@ -9,3 +9,4 @@
 - chapter four: [thread](./os_chapter4.md)
 - chapter five: [scheduler](./os_chapter5.md)
 - chapter six: [Synchronization](./os_chapter6.md)
+- chapter seven: [Deadlock](./os_chapter7.md)
