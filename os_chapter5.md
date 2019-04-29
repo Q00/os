@@ -11,7 +11,7 @@
 - select a process from the processes that are ready to execute
 - CPU scheduling decisions may take place when 
   - a process switches from running to waiting state (I/O request, event)
-  - a process switches from running to ready state ( time slice expriation)
+  - The a process switches from running to ready state ( time slice expriation)
   - a process switches from waiting to ready ( I/O completion)
   - a process terminates
   - [process state](./os_chater3.md)
