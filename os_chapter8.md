@@ -70,4 +70,162 @@ Most OSs use this method
 - Dynamic linking
   - linking is postponed until execution time
 - Shared library
-  - 
+  - printf를 사용하려는 프로세스가 많더라도 라이브러리코드는 한개이면 됨 
+
+### Swapping
+
+- 창고 
+
+- A process can be swapped temporarily out of memory to a backing store 이후 다시 메모리로 들어올 수 있음
+  - backing store : disks
+
+### Contiguous Allocaiton
+
+- software가 물리적 메모리 주소에 접근하는 것이 느려 하드웨어의 support를 받아 빠르게 수행한다.
+
+- Main Memory - two partition : os + user process
+- Memory mapping and protection
+  - Relocation register : 유저 프로세스를 보호하기 위해 사용된다. - 접근할 수 있는 물리적 메모리 주소의 최소값
+  - Limit register : 논리적 주소가 존재할 수 있는 범위 , 벗어나면 trap
+
+![image-20190603055259083](/Users/kyu/Library/Application%20Support/typora-user-images/image-20190603055259083.png)
+
+
+
+- 메모리 할당 방식
+
+  - Hole
+  - process is allocated memory from a hole large enough to accommodate it.
+  - Dynamic Storage-Allocation Problem
+    - First fit : 요청된 사이즈보다 큰 사이즈의 hole을 만나면 바로 할당
+    - Best fit : 빈공간중 가장 딱 맞는 사이즈
+    - Worst fit : 가장 큰 hole을 할당해줌
+  - External Fragment
+    - 파티션이 프로세스보다 작아서 적재가 안될경우 무용지물이 되어 외부 단편화 발생
+    - compaction으로 해결 가능 ( 작은 파티션을 하나의 큰 것으로 합침)
+  - Internal Fragment
+    - 프로세스가 파티션보다 작아서 파티션안에 낭비되는 공간이 발생
+  - 해결방법 : 페이징
+
+  ![image-20190603055808249](/Users/kyu/Library/Application%20Support/typora-user-images/image-20190603055808249.png)
+
+### paging
+
+- frame : 물리메모리가 일정 사이즈 블럭으로 나누어진 것
+- pages: 로지컬 메모리가 프레임과 같은 사이즈 블럭으로 나누어진 것
+- OS가 아닌 하드웨어에 의해 수행되며 페이지 단위로 프로그램을 구성하는 주소공간을 분할
+- 메모리를 페이지 단위로 관리 ( 하드웨어에 의존적 )
+- Whenever CPU presents an address, MMU looks up page table.
+  For translating logical address to physical address.
+
+![image-20190603060542312](/Users/kyu/Library/Application%20Support/typora-user-images/image-20190603060542312.png)
+
+- page frame은 연속적이지 않아도 됨( 프로세스에서는 연속적으로 보이나 메모리에서는 연속적이지 않을 수 있음)
+
+#### Address translation scheme
+
+![image-20190603060807744](/Users/kyu/Library/Application%20Support/typora-user-images/image-20190603060807744.png)
+
+- Page number(p) : contains base address of each page frame in physical memory
+  - is used as an index of page table
+- Page offset(d) : displacement - base address와 결합하여 physical memory address define
+
+![image-20190603061117769](/Users/kyu/Library/Application%20Support/typora-user-images/image-20190603061117769.png)
+
+#### Memory protection is implemented
+
+- by associating protection bits with each frame
+  - read only, read-write, execution-only bit
+  - Valid-invalid bit
+
+![image-20190609212817745](/Users/kyu/Library/Application Support/typora-user-images/image-20190609212817745.png)
+
+#### advantages
+
+- provides memory space larger than physical memory
+- support demand paging
+- Does not requirement memory placement policy
+- provide page sharing
+- protect memory sharing each other
+
+#### pitfalls
+
+- Temporal overhead (TLB - translation look-aside buffers로 해결)
+- spatial overhead ( multilevel page table..로 해결)
+
+### Page table
+
+#### implement
+
+- PTBR - page-table base register : 페이지 테이블 시작 위치를 담고 있다.
+  - 메인 메모리에 보관
+- 모든 데이터가 두번의 메모리 access 요구 
+  - page tabe + data/instruction
+  - 해결 방법 : TLB
+- TLB : Translation look aside buffers
+
+![image-20190603062248876](/Users/kyu/Library/Application%20Support/typora-user-images/image-20190603062248876.png)
+
+- 메모리에 두번 접근하는 문제를 해결하는 방법
+
+- 일부분의 페이지 넘버와 프레임 넘버를 캐싱하고 있어 빠르게 메모리를 읽어올 수 있는 특별한 fast-lookup 하드웨어 캐시
+
+- temporal locality
+
+  - 최근 사용되었던 기억 장소들이 집중적으로 액세스 되는 경향
+
+- Spatial locality : 프로그램이 메모리 x에 접근했다면 다음번에는 x 근처의 메모리에 접근할 가능성이 높다.
+
+- LRU 사용하여 가장 오래된 Entity 삭제
+
+- Effective Access time : 2 + TLB lookuptime - Hit ratio 
+
+  ```
+  (1+TLB lookuptime) Hit ratio +(2+TLB lookuptime)(1– Hit ratio )
+  ```
+
+#### Page table Structure
+
+- Hierachical Page table
+  - Two level page table scheme
+    - page table 또한 page로 나눠짐
+    - loads page table's page on-demand
+  - Three level page table scheme
+  - 이러한 레벨 페이지 테이블은 페이지 넘버가 레벨 개수만큼 scheme에 생김
+  - ![image-20190609194626273](/Users/kyu/Library/Application Support/typora-user-images/image-20190609194626273.png)
+- Hashed Page table
+  - ![image-20190609194657273](/Users/kyu/Library/Application Support/typora-user-images/image-20190609194657273.png)
+  - 값을 해쉬 후 frame과 offset을 합쳐 physical address를 찾음
+- Inverted Page table
+  - Process id를 통해서 global page table을 search
+    - 프로세스마다 하나의 페이지 테이블이 아닌 하나의 global 페이지 테이블이 존재함
+  - page table에는 process-id 가 존재함
+  - process마다 page table이 차지하는 공간을 절약할 수 있는 방법
+  - 주소 변환 요청이 들어오면 전체 페이지 테이블을 탐색해야된다는 단점이 있다.
+  - ![image-20190609195047585](/Users/kyu/Library/Application Support/typora-user-images/image-20190609195047585.png)
+
+### segmentation
+
+- 한 job이 하나의 segment를 받아서 multi-programming 을 수행하여 프로세스간 sharing이 원할하지 못했기 때문에 한 process에 여러개의 segment를 부여하게 됨
+- logical address
+  - virtual address 로서 cpu가 생성하는 address, compiler, linker가 사용한다.
+  - 이러한 logial address는 segment number + offset으로 구성된다.
+
+#### Segment table
+
+- Base address : it contains the starting physical address
+- Limit : it specifies the length of the segment
+
+![image-20190609204546628](/Users/kyu/Library/Application Support/typora-user-images/image-20190609204546628.png)
+
+- STBR : Segment-table base register 
+  - points to the segment table's location in memory
+- STLR : Segment-table length register
+  - indicates the number of segments used by a program
+  - segment number s is legal if s < STLR
+- validation bit 를 통해 read/write/execute priviliges
+  - Protection bits
+- code sharing occurs at segment level
+- Segments - 길이 가변
+  -  Dynamic storage-allocation problem 야기 
+    - First fit, best-fit, worst-fit
