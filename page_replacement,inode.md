@@ -26,7 +26,7 @@ Assuming demand paging with three frames, how many page faults would occur for t
 
 ![image-20190527154439911](/Users/kyu/Library/Application Support/typora-user-images/image-20190527154439911.png)
 
-### 2. inclue/linux/fs.h
+### 2. include/linux/fs.h
 
 파일 시스템은 하드디스크에서 부트블록, 슈퍼블록, 데이터블록, inode 블록으로 이루어져있다.
 
