@@ -3,7 +3,7 @@
 - 파일 시스템의 개념을 설명할 수 있다.
 - 파일 시스템의 다양한 인터페이스를 설명할 수 있다.
 
-![image-20190610112104975](/Users/kyu/Library/Application Support/typora-user-images/image-20190610112104975.png)
+![image-20190610112104975](./img/image-20190610112104975.png)
 
 - File System of the user's viewpoint
   - File system interface
@@ -42,11 +42,11 @@
 
 - A virtual container in which groups of files and possibly other directories
 
-![image-20190610113713971](/Users/kyu/Library/Application Support/typora-user-images/image-20190610113713971.png)
+![image-20190610113713971](./img/image-20190610113713971.png)
 
-![image-20190610115816489](/Users/kyu/Library/Application Support/typora-user-images/image-20190610115816489.png)
+![image-20190610115816489](./img/image-20190610115816489.png)
 
-![image-20190610115852652](/Users/kyu/Library/Application Support/typora-user-images/image-20190610115852652.png)
+![image-20190610115852652](./img/image-20190610115852652.png)
 
 
 
@@ -62,7 +62,7 @@
 
 ### Unix directory structure
 
-![image-20190610113757617](/Users/kyu/Library/Application Support/typora-user-images/image-20190610113757617.png)
+![image-20190610113757617](./img/image-20190610113757617.png)
 
 ### Big picture
 

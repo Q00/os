@@ -23,7 +23,7 @@
   - Less memory is needed
   - needs to allow pages to be swapped in and out
 
-![image-20190609210851366](/Users/kyu/Library/Application Support/typora-user-images/image-20190609210851366.png)
+![image-20190609210851366](./img/image-20190609210851366.png)
 
 - when a page is referenced
   - Valid-invalid bit 
@@ -33,7 +33,7 @@
 
 #### Page fault handling
 
-![image-20190609213655391](/Users/kyu/Library/Application Support/typora-user-images/image-20190609213655391.png)
+![image-20190609213655391](./img/image-20190609213655391.png)
 
 - invalid reference? 
   - if bad address or protection violation -> abort process
@@ -68,9 +68,9 @@
   - Same pages may be brought into memory several times
   - paging system 이 성능이 좋게 되는 근거
 
-![image-20190609214745643](/Users/kyu/Library/Application Support/typora-user-images/image-20190609214745643.png)
+![image-20190609214745643](./img/image-20190609214745643.png)
 
-![image-20190609215036187](/Users/kyu/Library/Application Support/typora-user-images/image-20190609215036187.png)
+![image-20190609215036187](./img/image-20190609215036187.png)
 
 
 
@@ -106,22 +106,22 @@
   - when a page is referenced, move it to the top
   - No search for replacement
 
-![image-20190527153329783](/Users/kyu/Library/Application Support/typora-user-images/image-20190527153329783.png)
+![image-20190527153329783](./img/image-20190527153329783.png)
 
 #### FIFO replacement
 
 - 가장 간단한 페이지교체 알고리즘으로 가장 오래된 페이지를 제거하는 알고리즘이다.
 - Belady's anomaly로 프로세스에게 프레임을 더 많이 할당하였는데 페이지 부재율이 증가하는 현상이 있다.
 
-![image-20190609215055995](/Users/kyu/Library/Application Support/typora-user-images/image-20190609215055995.png)
+![image-20190609215055995](./img/image-20190609215055995.png)
 
-![image-20190527152653195](/Users/kyu/Library/Application Support/typora-user-images/image-20190527152653195.png)
+![image-20190527152653195](./img/image-20190527152653195.png)
 
 #### Optimal replacement
 
 - 장래에 가장 오랫동안 사용되지 않는 페이지가 교체되는 알고리즘으로 현실에서는 앞으로 사용되지 않을 페이지에 대해 알 수 없으므로 비현실적인 방법이다.
 
-![image-20190527154439911](/Users/kyu/Library/Application Support/typora-user-images/image-20190527154439911.png)
+![image-20190527154439911](./img/image-20190527154439911.png)
 
 
 
@@ -184,7 +184,7 @@ local allocation을 사용하면 특정 프로세스가 과도하게 메모리�
 
 - It is based on the assumption of locality
 
-![image-20190609223245416](/Users/kyu/Library/Application Support/typora-user-images/image-20190609223245416.png)
+![image-20190609223245416](./img/image-20190609223245416.png)
 
 주소 주변 ( 위아래) : Spatial locality
 

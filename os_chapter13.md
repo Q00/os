@@ -6,7 +6,7 @@
 
 ### Modern I/O Systems
 
-![image-20190610135118829](/Users/kyu/Library/Application Support/typora-user-images/image-20190610135118829.png)
+![image-20190610135118829](./img/image-20190610135118829.png)
 
 Cpu는 device controller와 interact한다.
 
@@ -38,7 +38,7 @@ Special processor instructions used to transfer data
 - DMA controller에게 제어권을 넘기고 CPU는 한번 입출력의 개시 명령을 내리고 다른작업을 할 수 있음 ( I/O interrupt )
 - Bypasses CPU to transfer data Directly between I/O device and memory  
 
-![image-20190610140437381](/Users/kyu/Library/Application Support/typora-user-images/image-20190610140437381.png)
+![image-20190610140437381](./img/image-20190610140437381.png)
 
 ### Polling vs Interrupt
 

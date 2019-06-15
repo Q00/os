@@ -4,7 +4,7 @@
 
 
 
-![image-20190610121438850](/Users/kyu/Library/Application Support/typora-user-images/image-20190610121438850.png)
+![image-20190610121438850](./img/image-20190610121438850.png)
 
 - Fil System regards a storage device as a sequence of blocks
   - Disk is transferred between disk and memory in units of blocks
@@ -17,7 +17,7 @@
     - 파일의 크기, 소유자 소유그룹, 액세스타임, 접근권한 등...
   - Inode region and file data region are separated 
 
-![image-20190610121950138](/Users/kyu/Library/Application Support/typora-user-images/image-20190610121950138.png)
+![image-20190610121950138](./img/image-20190610121950138.png)
 
 - Inode의 사이즈는 각각 똑같다 ( inumber를 통해 접근 가능)
 - file data allocation
@@ -27,7 +27,7 @@
 
 #### Contigous Allocation
 
-![image-20190610122202335](/Users/kyu/Library/Application Support/typora-user-images/image-20190610122202335.png)
+![image-20190610122202335](./img/image-20190610122202335.png)
 
 Only starting location and length are required
 
@@ -38,7 +38,7 @@ Each file occpies a set of contiguous blocks on the disk
 
 #### Linked Allocation
 
-![image-20190610122419824](/Users/kyu/Library/Application Support/typora-user-images/image-20190610122419824.png)
+![image-20190610122419824](./img/image-20190610122419824.png)
 
 - 해당 파일 디스크립터에 기록된 파일의 첫번째 블록의 주소를 통해 파일 접근
 - Blocks may be sacttered anywhere on the disk - No waste of space
@@ -50,7 +50,7 @@ Each file occpies a set of contiguous blocks on the disk
 
 #### indexed allocation
 
-![image-20190610122812848](/Users/kyu/Library/Application Support/typora-user-images/image-20190610122812848.png)
+![image-20190610122812848](./img/image-20190610122812848.png)
 
 - It brings all pointers into the index block
   - file descriptor에 파일이 가지고 있는 Block 들에 대한 pointer를 index array로 저장
@@ -60,7 +60,7 @@ Each file occpies a set of contiguous blocks on the disk
 - If the size of index block is still small to hold pointers for a large file?
   - 해결법 : Multilevel index ( but 이중으로 처리하는 이러한 구조는 기존에 비해 데이터를 더 액세스 해야하므로 seek time이 증가)
 
-![image-20190610123548153](/Users/kyu/Library/Application Support/typora-user-images/image-20190610123548153.png)
+![image-20190610123548153](./img/image-20190610123548153.png)
 
 ### Free space Management
 
@@ -68,7 +68,7 @@ Each file occpies a set of contiguous blocks on the disk
 
 - if block[i] is allocated, bit is 1; else, bit is 0
 
-![image-20190610124348770](/Users/kyu/Library/Application Support/typora-user-images/image-20190610124348770.png)
+![image-20190610124348770](./img/image-20190610124348770.png)
 
 - Easy to get contiguous free blocks
 - Bit map requires extra space
@@ -81,7 +81,7 @@ Each file occpies a set of contiguous blocks on the disk
 - No space overhead
 - cannot get contiguous free blocks easily
 
-![image-20190610124654824](/Users/kyu/Library/Application Support/typora-user-images/image-20190610124654824.png)
+![image-20190610124654824](./img/image-20190610124654824.png)
 
 #### Grouping
 
@@ -120,7 +120,7 @@ Each file occpies a set of contiguous blocks on the disk
 - On file access patterns, temporal locality ( 사용된 프로그램은 또 사용됨)
 - Buffer cache keeps the blocks that will be used again - > reduce disk accesses
 
-![image-20190610130241466](/Users/kyu/Library/Application Support/typora-user-images/image-20190610130241466.png)
+![image-20190610130241466](./img/image-20190610130241466.png)
 
 - Inconsistency can occurs
   - Solutions for consistency
