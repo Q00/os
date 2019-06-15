@@ -14,8 +14,8 @@
 
 - Inode ( file descriptors)
   - Attribute + indexes for file data
-    - 파일이 크기, 소유자 소유그룹, 액세스타임, 접근권한 등...
-  - Inode regionb and file data region are separated 
+    - 파일의 크기, 소유자 소유그룹, 액세스타임, 접근권한 등...
+  - Inode region and file data region are separated 
 
 ![image-20190610121950138](/Users/kyu/Library/Application Support/typora-user-images/image-20190610121950138.png)
 
@@ -128,4 +128,3 @@ Each file occpies a set of contiguous blocks on the disk
     - synchronous write
     - journaling
       - 변경되지 않은 사항 추적
-
