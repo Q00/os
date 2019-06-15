@@ -7,7 +7,7 @@
 
 - restricted physical memory size
 
-  - prgorams larger than availiable space of the physical memory cannot be executed
+  - programs larger than availiable space of the physical memory cannot be executed
 
 - Virtual memory allows the execution of processs that are not completely in memory.
 
@@ -98,7 +98,7 @@
 
 - Counter implementation
   - Every page entry has a counter
-  - whenever page is referenced, the clock is icremented
+  - whenever page is referenced, the clock is incremented
   - when page A is referenced, copy the clock into A's counter
   - Replace the page with the smallest counter value
 - Stack implementation
@@ -135,7 +135,7 @@
 
 - Decide allocation size at page fault
   - fixed allocation
-    - Equal allpocation ( 100 frames, 5 processes, 20frames per process)
+    - Equal allocation ( 100 frames, 5 processes, 20frames per process)
     - proportional allocation : 프로세스 수에 비례
   - Priority Allocation
     - using priorities rather than size
