@@ -16,7 +16,7 @@
 
 ### File
 
-- A named collection of related information (이르믈 가지는 디스크에 저장되는 바이트의 집합)
+- A named collection of related information (이름을 가지는 디스크에 저장되는 바이트의 집합)
 - It is just a sequence of bytes
 - It is stored on secondary storage
 - It is divided into data files and program files
