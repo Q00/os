@@ -39,7 +39,7 @@
 - disk algorithm의 목적
 
   - Minimizes the seek time and rotational delay
-  - roatational delay에 대해서 roatational speend 와 track 마다 sector의 개수가 다르므로 os가 estimate할 수 없다.
+  - roatational delay에 대해서 roatational speed 와 track 마다 sector의 개수가 다르므로 os가 estimate할 수 없다.
   - 따라서 minimizing the seek time에 focusing
 
 - Evaluation of disk scheduling algorithms
