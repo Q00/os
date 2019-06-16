@@ -2,7 +2,7 @@
 
 - this is summury about operation system
 - Also you can Pull Request when you want to add information.
-- welcome! ❤️
+- welcome! 😇
 
 ## content
 - chapter one: [what is os](./os_chapter1.md)
